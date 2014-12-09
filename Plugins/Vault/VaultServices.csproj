@@ -7,8 +7,8 @@
     <ProjectGuid>{CF2F9616-68A4-4547-8882-106C2F1F2190}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UserServices</RootNamespace>
-    <AssemblyName>UserServices</AssemblyName>
+    <RootNamespace>VaultServices</RootNamespace>
+    <AssemblyName>VaultServices</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
@@ -18,18 +18,22 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <OutputPath>$(ProgramData)\coolOrange\powerGateServer\Plugins\Vault\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+	<StartAction>Program</StartAction>
+	<StartProgram>$(MSBuildExtensionsPath64)\..\coolOrange\powerGateServer\powerGateServer.exe</StartProgram>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Release.Samples\Vault\</OutputPath>
+    <OutputPath>$(ProgramData)\coolOrange\powerGateServer\Plugins\Vault\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+	<StartAction>Program</StartAction>
+	<StartProgram>$(MSBuildExtensionsPath64)\..\coolOrange\powerGateServer\powerGateServer.exe</StartProgram>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autodesk.Connectivity.Extensibility.Framework">
@@ -40,12 +44,14 @@
       <HintPath>References\Autodesk.Connectivity.WebServices.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="powerGateServer.Addins">
-      <HintPath>..\..\Release.ODataHost\powerGateServer.Addins.dll</HintPath>
+    <Reference Include="powerGateServer.SDK, Version=15.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(MSBuildExtensionsPath64)\..\coolOrange\powerGateServer\powerGateServer.SDK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Services" />
@@ -62,6 +68,7 @@
     <Compile Include="FindStrategies\FindVaultFilesByProperties.cs" />
     <Compile Include="FindStrategies\BaseClass.cs" />
     <Compile Include="EntityConverter.cs" />
+    <Compile Include="LinqExtensions.cs" />
     <Compile Include="Properties.cs" />
     <Compile Include="VaultConnection.cs" />
     <Compile Include="Documents.cs" />
@@ -70,6 +77,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VaultServices.addin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

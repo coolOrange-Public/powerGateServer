@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using powerGateServer.Addins;
+using powerGateServer.SDK;
 
 namespace UserServices.Vault.FindStrategies
 {

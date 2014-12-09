@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Autodesk.Connectivity.WebServices;
-using powerGateServer.Addins;
+using powerGateServer.SDK;
 
 namespace UserServices.Vault.Entities
 {
@@ -86,7 +86,7 @@ namespace UserServices.Vault
 			var srchConds = new List<SrchCond>();
 			foreach (var tokenExpression in whereExpression)
 			{
-				var propDef = GetPropertyDefinition(tokenExpression.Property);
+				var propDef = GetPropertyDefinition(tokenExpression.PropertyName);
 				if (propDef == null)
 					continue;
 
@@ -103,7 +103,7 @@ namespace UserServices.Vault
 			return srchConds;
 		}
 
-		string GetSearchValue(IWhereToken tokenExpression)
+		string GetSearchValue(IWhereToken<Entities.File> tokenExpression)
 		{
 			if (tokenExpression.Operator == OperatorType.EndsWith || tokenExpression.Operator == OperatorType.DoesNotEndsWith)
 				return "*" + tokenExpression.Value;

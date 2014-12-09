@@ -1,25 +1,31 @@
-﻿using System.Collections.Generic;
+﻿using System.Configuration;
+using System.Reflection;
 using Autodesk.Connectivity.WebServicesTools;
-using powerGateServer.Addins;
+using powerGateServer.SDK;
 
 namespace UserServices.Vault
 {
-	public class VaultService : IWebService
+	[WebServiceData("Arcona6", "VAULT_SRV")]
+	public class VaultService : WebService
 	{
-		public string Name { get { return "Arcona6/VAULT_SRV"; } }
-		public IEnumerable<IServiceMethod> Methods { get; private set; }
+		private readonly KeyValueConfigurationCollection _settings = LoadConfig().AppSettings.Settings;
 
 		public VaultService()
 		{
-			var credentials = new UserPasswordCredentials("localhost", "IKN-01", "Administrator", "");
+			var credentials = new UserPasswordCredentials(
+				_settings["Server"].Value, _settings["Vault"].Value,
+				_settings["User"].Value, _settings["Password"].Value);
 			var webServiceMgr = new WebServiceManager(credentials);
 			var vaultConnection = new VaultConnection(webServiceMgr);
 			var entityConverter = new VaultEntityConverter(vaultConnection);
-			Methods = new IServiceMethod[]
-			{
-				new DocumentService(vaultConnection, entityConverter),
-				new PropertyService()
-			};
+			AddMethod(new DocumentService(vaultConnection, entityConverter));
+			AddMethod(new PropertyService());
+		}
+
+		public static Configuration LoadConfig()
+		{
+			Assembly currentAssembly = Assembly.GetCallingAssembly();
+			return ConfigurationManager.OpenExeConfiguration(currentAssembly.Location);
 		}
 	}
 }

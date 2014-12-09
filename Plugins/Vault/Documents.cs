@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using powerGateServer.Addins;
-using powerGateServer.Addins.Extensions;
+using powerGateServer.SDK;
 using UserServices.Vault.Entities;
 using UserServices.Vault.FindStrategies;
 
@@ -9,7 +8,10 @@ namespace UserServices.Vault
 {
 	public class DocumentService : ServiceMethod<File>
 	{
-		public override string Name { get { return "Documents"; } }
+		public override string Name
+		{
+			get { return "Documents"; }
+		}
 
 		private readonly IVaultConnection _vaultConnection;
 		readonly IEntityConverter _entityConverter;

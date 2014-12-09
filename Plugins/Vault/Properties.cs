@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using powerGateServer.Addins;
+using powerGateServer.SDK;
 using UserServices.Vault.Entities;
 
 namespace UserServices.Vault

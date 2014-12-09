@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Autodesk.Connectivity.WebServices;
-using powerGateServer.Addins;
+using powerGateServer.SDK;
 
 namespace UserServices.Vault.FindStrategies
 {
@@ -19,7 +19,7 @@ namespace UserServices.Vault.FindStrategies
 		public override bool CanFind(IExpression<Entities.File> query)
 		{
 			if (   query.Where.Any() 
-			       && query.Where.All(w => new[] { "MasterId", "Id" }.Contains(w.Property) 
+			       && query.Where.All(w => new[] { "MasterId", "Id" }.Contains(w.PropertyName) 
 			                               && w.Operator == OperatorType.Equals
 			                               && new LogicalOperator?[] { LogicalOperator.And, null }.Contains(w.Rule)))
 				return false;

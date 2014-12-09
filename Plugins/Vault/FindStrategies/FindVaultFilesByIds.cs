@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using powerGateServer.Addins;
+using powerGateServer.SDK;
 
 namespace UserServices.Vault.FindStrategies
 {
 	public class FindVaultFilesByIds : FindVaultFiles
 	{
-		private IEnumerable<IWhereToken> _whereTokens;
+		private IEnumerable<IWhereToken<Entities.File>> _whereTokens;
 
 		public FindVaultFilesByIds(IVaultConnection connection)
 			: base(connection)
@@ -17,7 +17,7 @@ namespace UserServices.Vault.FindStrategies
 		public override bool CanFind(IExpression<Entities.File> query)
 		{
 			base.CanFind(query);
-			_whereTokens = Query.Where.Where(w => w.Property == "Id" && w.Operator == OperatorType.Equals);
+			_whereTokens = Query.Where.Where(w => w.PropertyName == "Id" && w.Operator == OperatorType.Equals);
 			return _whereTokens.Any();
 		}
 
