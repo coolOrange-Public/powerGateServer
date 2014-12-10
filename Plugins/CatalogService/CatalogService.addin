@@ -1,0 +1,6 @@
+﻿{
+// This is the path to your Plugin assembly.
+// Relative or absolute paths can be used
+
+"Assembly": ".\CatalogService.dll"
+}

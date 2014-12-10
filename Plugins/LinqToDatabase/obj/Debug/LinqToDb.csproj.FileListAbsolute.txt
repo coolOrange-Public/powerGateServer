@@ -1,6 +1,0 @@
-C:\ProgramData\coolOrange\powerGateServer\Plugins\LinqToDb\LinqToDb.addin
-C:\ProgramData\coolOrange\powerGateServer\Plugins\LinqToDb\LinqToDb.dll.config
-C:\ProgramData\coolOrange\powerGateServer\Plugins\LinqToDb\LinqToDb.dll
-C:\ProgramData\coolOrange\powerGateServer\Plugins\LinqToDb\LinqToDb.pdb
-C:\Users\martin.weiss.COOLORANGE\Documents\GitHub\powerGateServer\Plugins\LinqToDatabase\obj\Debug\LinqToDb.dll
-C:\Users\martin.weiss.COOLORANGE\Documents\GitHub\powerGateServer\Plugins\LinqToDatabase\obj\Debug\LinqToDb.pdb
