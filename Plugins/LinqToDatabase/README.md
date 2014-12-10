@@ -10,8 +10,14 @@ This library supports by default different LinqToEntity types, like:
 - LinqToSqlite
 - LinqToOracle
 - LinqToAccess
+- LinqToOleDb
 
 You can also write your custom provider of corse: http://blogs.msdn.com/b/mattwar/archive/2009/06/16/building-a-linq-iqueryable-provider-part-xv-iqtoolkit-v0-15.aspx
+
+By using the OleDbProvider you could also work with Microsoft excel if you want:
+- https://github.com/firestrand/IQToolkit/blob/master/IQToolkit.Data.Access/AccessQueryProvider.cs
+- http://csharp.net-informations.com/excel/csharp-excel-oledb.htm
+
 
 Our LinqToDatabase plugin does the following things:
 - it delegates the expression from the Query function to the LinqToEntity provider
