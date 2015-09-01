@@ -3,7 +3,7 @@ using SapServices.Services.BillofMaterialService.Entities;
 
 namespace SapServices.Services.BillofMaterialService
 {
-	[WebServiceData("Arcona6", "BILL_OF_MATERIAL_SRV")]
+	[WebServiceData("sap/opu/odata/Arcona6", "BILL_OF_MATERIAL_SRV")]
 	public class BillOfMaterialService : SapServiceBase
 	{
 

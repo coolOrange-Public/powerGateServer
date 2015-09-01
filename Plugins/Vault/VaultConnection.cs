@@ -15,7 +15,7 @@ namespace UserServices.Vault
 		Folder RootFolder { get; }
 		IEnumerable<PropDef> PropertyDefinitions { get; }
 
-		IEnumerable<Property> GetFileProperties(IEnumerable<long> fileIds);
+		Dictionary<long,IEnumerable<Property>> GetFileProperties(IEnumerable<long> fileIds);
 		IEnumerable<File> SearchFiles(IEnumerable<SrchCond> conditions,
 			IEnumerable<SrchSort> sorts, int quantity);
 
@@ -52,21 +52,23 @@ namespace UserServices.Vault
 			return CategoryDefinitions.First(c => c.Name.Equals(categoryName));
 		}
 
-		public IEnumerable<Property> GetFileProperties(IEnumerable<long> fileIds)
+		public Dictionary<long, IEnumerable<Property>> GetFileProperties(IEnumerable<long> fileIds)
 		{
-			var props = new List<Property>();
+			var fileProps = new Dictionary<long, IEnumerable<Property>>();
 			var properties = WebServiceManager.PropertyService.GetProperties("FILE", fileIds.ToArray(), PropertyDefinitions.Select(p => p.Id).ToArray());
 			foreach (var prop in properties)
 			{
 				if (prop.Val == null)
 					prop.Val = string.Empty;
-				props.Add(new Property
+				var props = fileProps[prop.EntityId] ?? new List<Property>();
+
+				((List<Property>)props).Add(new Property
 				{ 
 					EntityId = (int)prop.EntityId, 
 					Name = PropertyDefinitions.First(p => p.Id == prop.PropDefId).DispName, 
 					Value = prop.Val.ToString() });
 			}
-			return props;
+			return fileProps;
 		}
 
 		public IEnumerable<Autodesk.Connectivity.WebServices.File> SearchFiles(IEnumerable<SrchCond> conditions,IEnumerable<SrchSort> sorts, int quantity)

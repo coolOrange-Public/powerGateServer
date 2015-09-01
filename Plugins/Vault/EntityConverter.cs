@@ -1,20 +1,19 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Autodesk.Connectivity.WebServices;
 using powerGateServer.SDK;
+using UserServices.Vault.Entities;
+using VaultServices;
+using File = Autodesk.Connectivity.WebServices.File;
 
 namespace UserServices.Vault.Entities
 {
 	public partial class File
 	{
-		private readonly IVaultConnection _vaultConnection;
-		private readonly Autodesk.Connectivity.WebServices.File _vaultFile;
-
 		public File(IVaultConnection vaultConnection,
 			Autodesk.Connectivity.WebServices.File vaultFile)
 		{
-			_vaultConnection = vaultConnection;
-			_vaultFile = vaultFile;
 			Id = (int)vaultFile.Id;
 			MasterId = (int)vaultFile.MasterId;
 			Category = vaultFile.Cat.CatName;
@@ -27,10 +26,8 @@ namespace UserServices.Vault.Entities
 			Modified = vaultFile.ModDate;
 			Revision = vaultFile.FileRev.Label;
 
-			var category = _vaultConnection.GetCategoryByName(vaultFile.Cat.CatName);
+			var category = vaultConnection.GetCategoryByName(vaultFile.Cat.CatName);
 			CatColor = category.Color;
-			var lazyProperties = new Lazy<IEnumerable<Property>>(() => _vaultConnection.GetFileProperties(new[] { _vaultFile.Id }));
-			FileProperties = lazyProperties.Value;
 		}
 	}
 }
@@ -76,9 +73,14 @@ namespace UserServices.Vault
 			_vaultConnection = vaultConnection;
 		}
 
-		public Entities.File ToDataServiceFile(File file)
+		public IEnumerable<Entities.File> ToDataServiceFiles(IEnumerable<File> files)
 		{
-			return new Entities.File(_vaultConnection,file);
+			var dsFiles = files.Select(f=>new Entities.File(_vaultConnection,f));
+			var personsList = new LazyEnumerable<Property>(() =>
+			{
+				_vaultConnection.GetFileProperties(files.Select(f => f.Id));
+			});
+			return files;
 		}
 
 		public IEnumerable<SrchCond> ToSearchConditions(IWhereClause<Entities.File> whereExpression)

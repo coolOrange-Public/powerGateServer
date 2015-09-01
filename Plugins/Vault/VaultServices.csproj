@@ -22,8 +22,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-	<StartAction>Program</StartAction>
-	<StartProgram>$(MSBuildExtensionsPath64)\..\coolOrange\powerGateServer\powerGateServer.exe</StartProgram>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(MSBuildExtensionsPath64)\..\coolOrange\powerGateServer\powerGateServer.exe</StartProgram>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,8 +32,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-	<StartAction>Program</StartAction>
-	<StartProgram>$(MSBuildExtensionsPath64)\..\coolOrange\powerGateServer\powerGateServer.exe</StartProgram>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(MSBuildExtensionsPath64)\..\coolOrange\powerGateServer\powerGateServer.exe</StartProgram>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autodesk.Connectivity.Extensibility.Framework">
@@ -68,6 +68,7 @@
     <Compile Include="FindStrategies\FindVaultFilesByProperties.cs" />
     <Compile Include="FindStrategies\BaseClass.cs" />
     <Compile Include="EntityConverter.cs" />
+    <Compile Include="LazyEnumerable.cs" />
     <Compile Include="LinqExtensions.cs" />
     <Compile Include="Properties.cs" />
     <Compile Include="VaultConnection.cs" />

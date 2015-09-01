@@ -34,10 +34,10 @@ namespace CatalogService.Entities
 			TechnicalServiceVersion = 1;
 
 			ID = string.Format("/{0}/{1}_0001",
-				serviceInfo.BundleName, serviceInfo.ServiceName);
+				serviceInfo.Path, serviceInfo.ServiceName);
 			MetadataUrl = string.Format("{0}/$metadata", serviceInfo.Url);
 			TechnicalServiceName = string.Format("/{0}/{1}",
-				serviceInfo.BundleName, serviceInfo.ServiceName);
+				serviceInfo.Path, serviceInfo.ServiceName);
 			ServiceUrl = serviceInfo.Url.ToString();
 			ImageUrl = "";
 			UpdatedDate = pluginInfo.GetBuildTime();

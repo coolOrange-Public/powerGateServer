@@ -3,7 +3,7 @@ using SapServices.Services.DocumentInfoRecordService.Entities;
 
 namespace SapServices.Services.DocumentInfoRecordService
 {
-	[WebServiceData("Arcona6", "DOCUMENT_INFO_RECORD_SRV")]
+	[WebServiceData("sap/opu/odata/Arcona6", "DOCUMENT_INFO_RECORD_SRV")]
 	public class DocumentInfoRecordService : SapServiceBase
 	{
 		protected override void CreateTablesForEntities()

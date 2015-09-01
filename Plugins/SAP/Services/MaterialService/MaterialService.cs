@@ -3,7 +3,7 @@ using SapServices.Services.MaterialService.Entities;
 
 namespace SapServices.Services.MaterialService
 {
-	[WebServiceData("Arcona6", "MATERIAL_SRV")]
+	[WebServiceData("sap/opu/odata/Arcona6", "MATERIAL_SRV")]
 	public class MaterialService : SapServiceBase
 	{
 		protected override void CreateTablesForEntities()
