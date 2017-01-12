@@ -35,10 +35,10 @@ In the subfolder *Store* you can find xml-files. This is the xml-database for al
 [http://.../sap/opu/odata/Arcona6/MATERIAL_SRV/MatlTypeLookupCollection('FOOD')?$format=json](http://localhost:8080/sap/opu/odata/Arcona6/MATERIAL_SRV/MatlTypeLookupCollection('FOOD')?$format=json)
  
 7. Finding entites via *filter criterias*: 
-- where Description is 'Waste': 
+  - where Description is 'Waste': 
 [http://.../sap/opu/odata/Arcona6/MATERIAL_SRV/MatlTypeLookupCollection?$format=json&$filter=Description eq 'Waste'](http://localhost:8080/sap/opu/odata/Arcona6/MATERIAL_SRV/MatlTypeLookupCollection?$format=json&$filter=Description eq 'Waste')
 
-- where MatlType has 4 characters and Description contains 'products': 
+  - where MatlType has 4 characters and Description contains 'products': 
 [http://.../sap/opu/odata/Arcona6/MATERIAL_SRV/MatlTypeLookupCollection?$format=json&$filter=length(MatlType) eq 4 and substringof('products',Description) eq true](http://localhost:8080/sap/opu/odata/Arcona6/MATERIAL_SRV/MatlTypeLookupCollection?$format=json&$filter=length(MatlType) eq 4 and substringof('products',Description) eq true)
  
 8. *Creating* a new MaterialContext and it's navigation properties (via deep create):
