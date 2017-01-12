@@ -42,7 +42,7 @@ In the subfolder *Store* you can find xml-files. This is the xml-database for al
 [http://.../sap/opu/odata/Arcona6/MATERIAL_SRV/MatlTypeLookupCollection?$format=json&$filter=length(MatlType) eq 4 and substringof('products',Description) eq true](http://localhost:8080/sap/opu/odata/Arcona6/MATERIAL_SRV/MatlTypeLookupCollection?$format=json&$filter=length(MatlType) eq 4 and substringof('products',Description) eq true)
  
 8. *Creating* a new MaterialContext and it's navigation properties (via deep create):
-```
+  ```
 <code>
 POST /sap/opu/odata/Arcona6/MATERIAL_SRV/MaterialContextCollection HTTP/1.1
 Host: localhost:8080
@@ -52,13 +52,12 @@ Cache-Control: no-cache
  
 { "Description": [ { "Material": "ITEM-00116", "Langu": "DE", "MatlDesc": "Hallo" }, { "Material": "ITEM-00116", "Langu": "EN", "MatlDesc": "hello" } ], "PlantData": { "Material": "ITEM-00116", "Plant": "AP01", "PurGroup": "001", "Availcheck": "01", "PurStatus": "01" }, "Plant": "asdf", "Material": "ITEM-00116", "ValuationType": "asdf", "ValuationArea": "asdf" }
 </code>
-```
-
+  ```
 9. Now we can access the MaterialContext *navigation-property* 'PlantData' like this: 
 [http://.../sap/opu/odata/Arcona6/MATERIAL_SRV/MaterialContextCollection(Material='ITEM-00116',Plant='asdf',ValuationArea='asdf',ValuationType='asdf')/PlantData?$format=json](http://localhost:8080/sap/opu/odata/Arcona6/MATERIAL_SRV/MaterialContextCollection(Material='ITEM-00116',Plant='asdf',ValuationArea='asdf',ValuationType='asdf')/PlantData?$format=json)
  
 10. *Updating* the 'MatlDesc' of a specific Description:
-```
+  ```
 <code>
 PUT /sap/opu/odata/Arcona6/MATERIAL_SRV/DescriptionCollection(Langu='DE',Material='ITEM-00116') HTTP/1.1
 Host: localhost:8080
@@ -68,15 +67,14 @@ Cache-Control: no-cache
  
 { "MatlDesc": "Latex" }
 </code>
-```
-
+  ```
 11. *Deleting* one of the two descriptions from our MaterialContext:
-```
+  ```
 <code>
 DELETE /sap/opu/odata/Arcona6/MATERIAL_SRV/DescriptionCollection(Langu='EN',Material='ITEM-00116') HTTP/1.1
 Host: localhost:8080
 Cache-Control: no-cache
 </code>
-```
+  ```
 
 For more possibilities with [Odata](http://www.odata.org/documentation/odata-version-2-0/uri-conventions/|Odata) give a look to this link.
