@@ -1,7 +1,7 @@
 powerGateServer
 ===============
 
-This repository contains different plugins for powerGateServer
+This repository contains different plugins for [powerGateServer](https://www.coolorange.com/wiki/doku.php?id=powergateserver)
 
 At the moment the Plugins are:
 - ERP
