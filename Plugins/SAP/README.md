@@ -27,7 +27,6 @@ In the subfolder *Store* you can find xml-files. This is the xml-database for al
 5. *Ordering* unit of measures: 
 - ascending by "Description": 
 [http://.../sap/opu/odata/Arcona6/MATERIAL_SRV/BaseUomLookupCollection?$format=json&$orderby=Description](http://localhost:8080/sap/opu/odata/Arcona6/MATERIAL_SRV/BaseUomLookupCollection?$format=json&$orderby=Description)
-
 - descending by "BaseUOM": 
 [http://.../sap/opu/odata/Arcona6/MATERIAL_SRV/BaseUomLookupCollection?$format=json&$orderby=BaseUom desc](http://localhost:8080/sap/opu/odata/Arcona6/MATERIAL_SRV/BaseUomLookupCollection?$format=json&$orderby=BaseUom desc)
  
