@@ -25,9 +25,10 @@ In the subfolder *Store* you can find xml-files. This is the xml-database for al
 [http://.../sap/opu/odata/Arcona6/MATERIAL_SRV/MatlGroupLookupCollection?$format=json&$skip=3](http://localhost:8080/sap/opu/odata/Arcona6/MATERIAL_SRV/MatlGroupLookupCollection?$format=json&$skip=3)
  
 5. *Ordering* unit of measures: 
-- ascending by "Description": 
+  - ascending by "Description": 
 [http://.../sap/opu/odata/Arcona6/MATERIAL_SRV/BaseUomLookupCollection?$format=json&$orderby=Description](http://localhost:8080/sap/opu/odata/Arcona6/MATERIAL_SRV/BaseUomLookupCollection?$format=json&$orderby=Description)
-- descending by "BaseUOM": 
+
+  - descending by "BaseUOM": 
 [http://.../sap/opu/odata/Arcona6/MATERIAL_SRV/BaseUomLookupCollection?$format=json&$orderby=BaseUom desc](http://localhost:8080/sap/opu/odata/Arcona6/MATERIAL_SRV/BaseUomLookupCollection?$format=json&$orderby=BaseUom desc)
  
 6. Accessing an entity by it's *key*: 
