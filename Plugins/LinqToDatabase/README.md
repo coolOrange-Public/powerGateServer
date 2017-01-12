@@ -1,7 +1,9 @@
+# LinqToDatabase plugin
 LinqToDatabase plugin can be used as template or sample for connecting to different types of databases.
 
+## Working with the LinqToDatabase-Plugin
 The current implementation uses SQLite database stored in following directory:
-C:\ProgramData\coolOrange\powerGateServer\Plugins\LinqToDb\LinqToDbService.sdf
+> %ProgramData%\coolOrange\powerGateServer\Plugins\LinqToDb\LinqToDbService.sdf
 
 The key thing of this plugin is the usage of the IQToolkit library coming from LinqPad (http://www.linqpad.net/).
 This library supports by default different LinqToEntity types, like:
@@ -24,12 +26,13 @@ Our LinqToDatabase plugin does the following things:
 - it uses the LinqToEntityProvider for automatically dealing with Inserts, Updates and deleting entities
 
 After building the plugin, press F5 and run powerGateServer.
+
+## Here are some Http requests that can be directly send to powerGateServer now
 The following query should return an emtpty list now, because no File is stored in the Sqlite-Database.
-  http://localhost:8080/sap/opu/odata/LinqToDb/LINQ_SRV/Files?$format=json
+  [http://.../sap/opu/odata/LinqToDb/LINQ_SRV/Files?$format=json](http://localhost:8080/sap/opu/odata/LinqToDb/LINQ_SRV/Files?$format=json)
 You can start adding a new entity now!
 
-Getting started
-===============
+## Getting started
 LinqToDbService.cs is the WebService class. Here we open a new Sqlite connection and we are constructing a new SQLiteQueryProvider.
 Because we construct our provider with default queryMapping and queryPolicy, we have to follow certain rules when constructing the FileContext and Files-ServiceMethod:
 - note that FileContext class has a key field ending with 'ID' : FileID. when using ImplicitMapping, the field ending with ID is used as primarykey field in the database.
