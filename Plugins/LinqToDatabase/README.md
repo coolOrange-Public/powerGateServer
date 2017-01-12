@@ -30,6 +30,7 @@ After building the plugin, press F5 and run powerGateServer.
 ## Here are some Http requests that can be directly send to powerGateServer now
 The following query should return an emtpty list now, because no File is stored in the Sqlite-Database.
   [http://.../sap/opu/odata/LinqToDb/LINQ_SRV/Files?$format=json](http://localhost:8080/sap/opu/odata/LinqToDb/LINQ_SRV/Files?$format=json)
+  
 You can start adding a new entity now!
 
 ## Getting started
