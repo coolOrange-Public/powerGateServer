@@ -13,14 +13,10 @@ In the subfolder *Store* you can find xml-files. This is the xml-database for al
 ## Here are some Http requests that can be directly send to powerGateServer now
 
 1. Returns the **metadata** of materialservice:
-
 [http://.../sap/opu/odata/Arcona6/MATERIAL_SRV/$metadata](http://localhost:8080/sap/opu/odata/Arcona6/MATERIAL_SRV/$metadata)
  
- 
 2. Returns the plantlookups in **json-format**:
-
 [http://.../sap/opu/odata/Arcona6/MATERIAL_SRV/PlantLookupCollection?$format=json](http://localhost:8080/sap/opu/odata/Arcona6/MATERIAL_SRV/PlantLookupCollection?$format=json)
- 
  
 3. Returning a specific **amount** of language-entities:
 
