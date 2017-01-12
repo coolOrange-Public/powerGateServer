@@ -69,6 +69,7 @@ Cache-Control: no-cache
 </code>
   ```
 11. *Deleting* one of the two descriptions from our MaterialContext:
+
   ```
 <code>
 DELETE /sap/opu/odata/Arcona6/MATERIAL_SRV/DescriptionCollection(Langu='EN',Material='ITEM-00116') HTTP/1.1
