@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{667E70F0-A11A-4FA4-A5B5-692B2DE34BE8}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\ProductInfo.cs = ..\..\ProductInfo.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService", "CatalogService.csproj", "{9D0256FA-F8A8-418B-99FB-D437E7BDFD80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService.Tests", "CatalogService.Tests\CatalogService.Tests.csproj", "{6581F3D8-3E57-4D9E-8EB2-17A86D317A36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D0256FA-F8A8-418B-99FB-D437E7BDFD80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D0256FA-F8A8-418B-99FB-D437E7BDFD80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D0256FA-F8A8-418B-99FB-D437E7BDFD80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D0256FA-F8A8-418B-99FB-D437E7BDFD80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6581F3D8-3E57-4D9E-8EB2-17A86D317A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6581F3D8-3E57-4D9E-8EB2-17A86D317A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6581F3D8-3E57-4D9E-8EB2-17A86D317A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
+	EndGlobalSection
+EndGlobal
