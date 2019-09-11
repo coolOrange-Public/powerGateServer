@@ -1,0 +1,20 @@
+<ValuationAreaLookupTable>
+  <xs:schema id="ValuationAreaLookupTable" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="ValuationAreaLookupTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ValuationAreaLookup">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EntityID" msdata:AutoIncrement="true" type="xs:int" minOccurs="0" />
+                <xs:element name="Plant" type="xs:string" minOccurs="0" />
+                <xs:element name="ValArea" type="xs:string" minOccurs="0" />
+                <xs:element name="MatlType" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+</ValuationAreaLookupTable>
