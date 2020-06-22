@@ -1,0 +1,54 @@
+<PurGroupLookupTable>
+  <xs:schema id="PurGroupLookupTable" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="PurGroupLookupTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="PurGroupLookup">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EntityID" msdata:AutoIncrement="true" type="xs:int" minOccurs="0" />
+                <xs:element name="PurGroup" type="xs:string" minOccurs="0" />
+                <xs:element name="Description" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <PurGroupLookup>
+    <EntityID>0</EntityID>
+    <PurGroup>001</PurGroup>
+    <Description>Einkäufer 1</Description>
+  </PurGroupLookup>
+  <PurGroupLookup>
+    <EntityID>1</EntityID>
+    <PurGroup>002</PurGroup>
+    <Description>Einkäufer 2</Description>
+  </PurGroupLookup>
+  <PurGroupLookup>
+    <EntityID>2</EntityID>
+    <PurGroup>003</PurGroup>
+    <Description>Einkäufer 3</Description>
+  </PurGroupLookup>
+  <PurGroupLookup>
+    <EntityID>3</EntityID>
+    <PurGroup>APU</PurGroup>
+    <Description>American purch grp</Description>
+  </PurGroupLookup>
+  <PurGroupLookup>
+    <EntityID>4</EntityID>
+    <PurGroup>FPU</PurGroup>
+    <Description>Far East purch grp</Description>
+  </PurGroupLookup>
+  <PurGroupLookup>
+    <EntityID>5</EntityID>
+    <PurGroup>GDL</PurGroup>
+    <Description>Gary Lutts</Description>
+  </PurGroupLookup>
+  <PurGroupLookup>
+    <EntityID>6</EntityID>
+    <PurGroup>GPU</PurGroup>
+    <Description>German purch grp</Description>
+  </PurGroupLookup>
+</PurGroupLookupTable>
