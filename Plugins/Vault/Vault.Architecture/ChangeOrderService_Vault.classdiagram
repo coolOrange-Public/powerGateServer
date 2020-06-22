@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="903a87fc-2dee-404f-babd-2ccedbd0be02" name="ChangeOrderService" linkedPackageId="33e046b4-00e9-4c52-b82c-a1c2806d7707" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="96ec14fb-7dbe-4853-a17f-bd41045d97a5" name="IVaultECOCreator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6e8e0f6e-63ad-45d9-a7b7-a3ed6e7017ce" />
+        <suppliersInternal>
+          <dependency Id="3b69217b-90da-4c2f-a4f3-9886c0a9768c">
+            <classMoniker Id="28982b54-0638-4472-8f5f-6b03aadeff63" LastKnownName="ChangeOrderSettings" />
+            <elementDefinition Id="1fc2eee0-e53b-40d2-8559-9d07fc63762e" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperations>
+          <operation Id="d4415f13-f1f3-4a09-9bd3-fda530fe8d92" name="Create" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="113ef58f-d7f8-4ffd-89f7-8e056c9c2408" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="856d94e0-7c2e-41c2-807e-2a790b75d27d" name="changeOrderSetttings" direction="In" isUnique="false">
+                  <elementDefinition Id="c97befda-bd84-4c8e-8c75-af69b49c3a8f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="849ca5c2-dbe4-49d2-b2a7-183977b50710" LastKnownName="ChangeOrderSettings" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="111ae2a3-a0c2-489a-bf9c-37a2f0304914" direction="Return" isUnique="false">
+                  <elementDefinition Id="d47532e1-e5b3-4bef-b0ba-ad67eed0565c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f3cfdb8d-b766-4832-8514-e8a636c5c75a" LastKnownName="ChangeOrder" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="849ca5c2-dbe4-49d2-b2a7-183977b50710" name="ChangeOrderSettings" isAbstract="false" isLeaf="false" cachedFullName="ChangeOrderSettings">
+        <elementDefinition Id="0b232804-4e3a-44df-b8ca-f0f6cd39b3c8" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f3cfdb8d-b766-4832-8514-e8a636c5c75a" name="ChangeOrder" isAbstract="false" isLeaf="false" cachedFullName="ChangeOrder">
+        <elementDefinition Id="ac0d95a8-bfd4-499a-9090-4b6b93053a1a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="28982b54-0638-4472-8f5f-6b03aadeff63" name="ChangeOrderSettings" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="423c1fd7-9d33-434b-82a8-98edeb2cc2a3" />
+        <ownedAttributesInternal>
+          <property Id="03df85c4-8e68-46b4-be38-afb46e32db71" name="RoutingId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ae6fdd7d-d932-49f0-b7b0-d1d30af7fba9" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fc94fb7a-0382-458a-a4c5-a54b490e18af" LastKnownName="long" />
+            </type_NamedElement>
+          </property>
+          <property Id="efdd59a2-b974-4fd2-bda6-e084176f85c3" name="ChangeOrderNumber" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="efc88793-29ee-450e-9d97-25e1536cd2a5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8358a15f-0754-4959-9dad-e59eee16cd88" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="aa2ee0f6-ce18-4f4c-bcd4-250174be311a" name="Title" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a5a964e7-883e-45d8-9d23-b592e7c68aa8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8358a15f-0754-4959-9dad-e59eee16cd88" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="6efaadc5-37c7-47c9-ba24-98e05175a915" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b718035d-a678-4fe3-b741-7dc4bc3cb71a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8358a15f-0754-4959-9dad-e59eee16cd88" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="c45f1d5f-edca-423c-97e6-be0d4e9787ea" name="DeadLine" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="eb013be9-1263-43b6-8d76-116a98263544" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="cd7f9605-dad2-40ca-b976-5dd8b0fd7694" LastKnownName="DateTime" />
+            </type_NamedElement>
+          </property>
+          <property Id="cbea53b9-0425-4b65-bca2-28c5a3de3fc7" name="AssociatedItemMasterIds" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8883a8ac-643b-4fc2-a5dc-0fde66515d44" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e0c7d952-3575-4dc1-9e70-377457c3c609" LastKnownName="IEnumerable&lt;long&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="ab615f3c-100b-4215-8ba4-eaa3bc6d2e7d" name="AssociatedFileMasterIds" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b7ef9739-c46e-4d08-b50e-9f7321da3fa8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e0c7d952-3575-4dc1-9e70-377457c3c609" LastKnownName="IEnumerable&lt;long&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="3e137151-905b-40f6-99a6-f28b6fbc96a0" name="AssociatedAttachmentIds" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4a3d756a-0c17-4485-8d9c-c077d8392679" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2215bdd8-7561-4685-86d4-783c82ecd4f2" LastKnownName="IEnumerable&lt;long&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="b61b3a30-a07e-41b2-b71b-8f202c6dafa7" name="Properties" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4020df17-2e9c-4b0c-b502-cb4360b6f50e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2f6d5252-a9af-4450-abdd-dc3d85da5793" LastKnownName="Dictionary&lt;long, object&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="35d486df-d854-4082-a2c1-5219eca75e2e" name="AssociatedProperties" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d6cf8ac5-940a-4d7c-aa4d-4f28e5005d35" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="40f8d91c-ef23-46f1-b04b-7d989eb85bc3" LastKnownName="IEnumerable&lt;AssocPropItem&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="a890f742-0104-45bf-a1e8-01d709bfb1be" name="Comments" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="adddcd09-2fa1-4570-8a3d-9e3e458ac6b2" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7382de47-6936-40b4-b506-fa66ef54aba9" LastKnownName="IEnumerable&lt;MsgGroup&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="4eba3f72-6a66-4a41-8ea2-1e455607ab64" name="NotificationEmals" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fef94920-3de6-4cbd-bf95-7d302ded3d1f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="90b1f6ec-b83b-4efb-9148-02e22a23412e" LastKnownName="IEnumerable&lt;Email&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="fc94fb7a-0382-458a-a4c5-a54b490e18af" name="long" isAbstract="false" isLeaf="false" cachedFullName="long">
+        <elementDefinition Id="bfc54a16-ebf0-4091-bffb-c02ab4d1cb29" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="8358a15f-0754-4959-9dad-e59eee16cd88" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="ac1c2f91-56aa-431f-b0df-2c7d85ec08d6" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cd7f9605-dad2-40ca-b976-5dd8b0fd7694" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
+        <elementDefinition Id="80602a8b-002d-45ad-9b82-39058b9bbb02" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e0c7d952-3575-4dc1-9e70-377457c3c609" name="IEnumerable&lt;long&gt;" isAbstract="false" isLeaf="false" cachedFullName="IEnumerable&lt;long&gt;">
+        <elementDefinition Id="fe7fe405-d4f5-4073-a454-9e0d5246892d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2215bdd8-7561-4685-86d4-783c82ecd4f2" name="IEnumerable&lt;long&gt;" isAbstract="false" isLeaf="false" cachedFullName="IEnumerable&lt;long&gt;">
+        <elementDefinition Id="fe7fe405-d4f5-4073-a454-9e0d5246892d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2f6d5252-a9af-4450-abdd-dc3d85da5793" name="Dictionary&lt;long, object&gt;" isAbstract="false" isLeaf="false" cachedFullName="Dictionary&lt;long, object&gt;">
+        <elementDefinition Id="2997d5f4-d17d-4bc5-af7d-fd7681ce3a8e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="40f8d91c-ef23-46f1-b04b-7d989eb85bc3" name="IEnumerable&lt;AssocPropItem&gt;" isAbstract="false" isLeaf="false" cachedFullName="IEnumerable&lt;AssocPropItem&gt;">
+        <elementDefinition Id="2ae4843f-b6d5-4ffe-bab4-ff9c7e540d5a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7382de47-6936-40b4-b506-fa66ef54aba9" name="IEnumerable&lt;MsgGroup&gt;" isAbstract="false" isLeaf="false" cachedFullName="IEnumerable&lt;MsgGroup&gt;">
+        <elementDefinition Id="970482e5-df29-480d-8e0f-7797cf9f0992" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="90b1f6ec-b83b-4efb-9148-02e22a23412e" name="IEnumerable&lt;Email&gt;" isAbstract="false" isLeaf="false" cachedFullName="IEnumerable&lt;Email&gt;">
+        <elementDefinition Id="e33b7f97-814c-4289-8c19-5d3e58805915" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="45c236f0-20e1-461d-b4fd-bf7398c5dc0a" name="VaultECOCreator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9a2d6807-c014-4bb4-be9f-ed70460cca23" />
+        <suppliersInternal>
+          <interfaceRealization Id="9c2898ff-a0fa-4e89-82d0-746cd015ef3f">
+            <interfaceMoniker Id="96ec14fb-7dbe-4853-a17f-bd41045d97a5" LastKnownName="IVaultECOCreator" />
+            <elementDefinition Id="9a8783dd-ac05-4e57-a6fd-a2ab0ccc59c3" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="8171f456-47e5-4c0f-9eb1-1c9fec1d94ec" name="Create" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="085c0d7e-1fe0-40d5-80cd-bbcec84e3ceb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="91de0443-d4d7-41c3-accd-2e5bce1260be" name="changeOrderSetttings" direction="In" isUnique="false">
+                  <elementDefinition Id="38a57bf0-754a-40a1-93d6-6c467c7df0a9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="849ca5c2-dbe4-49d2-b2a7-183977b50710" LastKnownName="ChangeOrderSettings" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bfc3bd0a-0f2b-4985-83ee-391bc31db447" direction="Return" isUnique="false">
+                  <elementDefinition Id="ff33f1ed-bc25-4713-904a-67efab1df6d4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f3cfdb8d-b766-4832-8514-e8a636c5c75a" LastKnownName="ChangeOrder" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="33e046b4-00e9-4c52-b82c-a1c2806d7707" name="Vault.Architecture">
+    <elementDefinition Id="70781ad9-2887-4936-8c8b-6399908513c6" />
+    <profileInstances>
+      <packageHasProfileInstances Id="d6e60535-45e2-4218-aa95-7a428dbe3a33">
+        <profileInstance Id="2011f199-1a86-4e50-9a94-f20b89da6358" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f9b69ad0-eceb-4e97-a096-2094363ff3c4">
+        <profileInstance Id="95fbd0ae-e629-4f01-83fb-5499fd64a567" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

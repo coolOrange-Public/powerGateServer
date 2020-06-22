@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.postsharp.org/1.0/configuration">
+	<License Value="103967-ZU3RJQQQVQ2EQ3RR588UN3DVA68VNBAW66KUNWYQQTZTB3JVDA9XGSPAE62NQNSF7VZTGP9V5KBC7CBKJUMVV9FSECZCXSWCMSV22H5LYMZFYSQQBTHPTDWQP3"/>
+	<Logging xmlns="clr-namespace:PostSharp.Patterns.Diagnostics;assembly:PostSharp.Patterns.Diagnostics">
+		<Profiles>
+			<LoggingProfile Name="default">
+				<ExceptionOptions >
+					<LoggingOptions Level="Warning"  />
+				</ExceptionOptions>
+			</LoggingProfile>
+		</Profiles>
+	</Logging>
+	<Multicast>
+		<LogAttribute xmlns="clr-namespace:PostSharp.Patterns.Diagnostics;assembly:PostSharp.Patterns.Diagnostics" />
+	</Multicast>
+</Project>
