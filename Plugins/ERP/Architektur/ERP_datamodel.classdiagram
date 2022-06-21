@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="bc6a02ea-9dfb-4cc2-97d5-3aa04822fed3" name="ERP_datamodel" linkedPackageId="5e192422-95a7-4f12-8b9f-6e0e583b741f" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a9ae0091-3a3e-444c-b4e3-46a0f1749689" name="Material" isAbstract="false" isLeaf="true" isActiveClass="false">
+        <elementDefinition Id="7b189ab9-264d-4e6e-8acb-bc36d408ee56" />
+        <suppliersInternal>
+          <dependency Id="f2201943-06b5-4051-b58e-086b5e5de9bc">
+            <classMoniker Id="b849cefd-7ae1-414c-b5e5-ca5c3cf260ab" LastKnownName="MaterialDescription" />
+            <elementDefinition Id="b2fc3d5a-b42f-4c04-a333-3d1b71f44d0c" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="7dc483a1-fd5d-4d25-9520-9045c8cb7abd" name="Number" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4ef02699-406b-49b9-9fff-130d499854ca" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="feb87c61-3f31-4a65-af45-f0497e8dd221" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="17480c28-b1ea-46c7-bd54-32947522d396" name="Version" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8b011725-e61a-42f5-9d89-34132f4b87c5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3c816f5d-87fc-4f98-a282-ea94330f306d" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="608154c6-fa31-4289-aa17-37c88e4dda87" name="Descriptions" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="4a22952b-c3bb-4bef-aa3a-02c70b717868" name="Lower" value="1">
+                <elementDefinition Id="25441d72-ff78-472a-855a-c3037ac9827b" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="7d15e666-c9b5-49ba-b793-ad6d604e0598" name="Upper" value="*">
+                <elementDefinition Id="e79c778a-8cf5-47cd-8fc6-ee2aafaa987d" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="a614e572-8f59-4a47-bb68-65c7de099944" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0b194d7d-6aa0-46bc-89eb-05a561e99b84" LastKnownName="MaterialDescription" />
+            </type_NamedElement>
+          </property>
+          <property Id="4761e96a-5fac-49a8-b6a2-7b29612ecea9" name="UnitOfMeasure" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a99807af-fca7-42af-a9d6-e2988b869308" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="95b4e420-c185-45d8-ab8e-c7ebba837df5" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="9d4c6474-fd8d-45d1-ad22-dc0771c68ee1" name="Type" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e26829c5-ed32-44a1-bd0a-e9d6e9eebd2d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c2ea41ca-3529-4dcf-8a8a-80342cd8c339" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b849cefd-7ae1-414c-b5e5-ca5c3cf260ab" name="MaterialDescription" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7c6cf7d5-3af9-4435-a718-03ee9ba5f3f5" />
+        <ownedAttributesInternal>
+          <property Id="ee02c114-67ce-4871-b8b1-c224ad67ea4c" name="Number" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="dbef921c-376f-4d98-8ccc-1734b7e5101b" />
+          </property>
+          <property Id="320058ac-5e17-4750-8946-3631f802994b" name="Version" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f022bfcf-8305-4ef8-b17e-a8e09cd7fa70" />
+          </property>
+          <property Id="cb5dfb89-8d09-415e-8a6c-26f31555c306" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e4a9d80a-4c05-4210-9e04-997c946673d7" />
+          </property>
+          <property Id="886f0330-a9e4-4306-81a6-46337e8c6a2c" name="Language" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="01cecaac-6099-4147-849e-714041be5e70" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="feb87c61-3f31-4a65-af45-f0497e8dd221" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c2ea41ca-3529-4dcf-8a8a-80342cd8c339" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="95b4e420-c185-45d8-ab8e-c7ebba837df5" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3c816f5d-87fc-4f98-a282-ea94330f306d" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0b194d7d-6aa0-46bc-89eb-05a561e99b84" name="MaterialDescription" isAbstract="false" isLeaf="false" cachedFullName="Architektur::MaterialDescription">
+        <elementDefinition Id="7c6cf7d5-3af9-4435-a718-03ee9ba5f3f5" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1b40a5e7-420b-4038-bcde-42ce4e6de3a7" name="Bom" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="86c75d12-6f87-4e30-b895-25b17c16c37f" />
+        <suppliersInternal>
+          <dependency Id="ec4c3457-5f23-4ad2-8b07-8498d51317d4">
+            <classMoniker Id="3cd33151-aadc-4837-97a1-0c52976c6be9" LastKnownName="BomItem" />
+            <elementDefinition Id="64b11595-859a-4086-8c6b-e633000a45ca" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="fd33e2fd-6f8b-4f23-9af1-71e0cfb404d4" name="ParentNumber" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="377d26dc-6449-4878-948e-adac6b45431c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8cbd8bfc-3bc1-46f1-baca-7b028db812cb" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="e3fb0b15-2758-4b7f-8983-54c0760d7ce7" name="ParentVersion" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="601d8a69-2325-43e3-a643-7c87c1a35084" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b85faaed-a215-4df9-b17a-f10f9c006f00" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="ac127cf2-24bb-460d-9252-b8544d64871f" name="Children" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="40fdbd44-ae28-4370-b5e0-9921c67a29ae" name="Lower" value="1">
+                <elementDefinition Id="1ec075d8-874e-4d2b-9a90-8858dad10fc2" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="db7a23d2-ccda-49a0-b8c0-f9664aacc017" name="Upper" value="*">
+                <elementDefinition Id="7e5e8519-5425-45d6-8429-567e76c1f8cb" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="17a419d6-f815-44cf-a7ed-31cd738e8182" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="23e228e8-c62c-48e2-a1e2-9b55df27a1fb" LastKnownName="BomItem" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="8cbd8bfc-3bc1-46f1-baca-7b028db812cb" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b85faaed-a215-4df9-b17a-f10f9c006f00" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="561d3d76-b3f3-40d9-8883-556c611989dd" name="MaterialService" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0b26cb72-f582-49c4-891a-e62a48c13fa8" />
+        <suppliersInternal>
+          <dependency Id="aa2455d9-fc6d-4c92-b463-add59e0aa8ba">
+            <classMoniker Id="996e1b66-3674-4cc0-adca-0a810b782519" LastKnownName="Materials" />
+            <elementDefinition Id="8e722580-5189-4cc9-8286-b261aebfb3fb" />
+          </dependency>
+          <dependency Id="6cf373d2-21f2-48b6-83e1-2fedcf8ec259">
+            <classMoniker Id="a81686e1-bb88-41f2-9901-6f3f92dd3705" LastKnownName="MaterialDescriptions" />
+            <elementDefinition Id="2b114bf5-7cf6-4ecd-906f-26ad690486ab" />
+          </dependency>
+          <dependency Id="d7ca9f7f-3eaa-4435-a90b-a83f4637dc67">
+            <classMoniker Id="6866bb80-0347-4969-94fa-9d827d3c413c" LastKnownName="UnitOfMeasuresLookup" />
+            <elementDefinition Id="0dac05a5-3d4a-4285-b2e1-93998bdf6331" />
+          </dependency>
+          <dependency Id="d89c88e4-5684-48b3-bb83-b79290a98172">
+            <classMoniker Id="dc97f19f-4d1f-49ff-a992-b832cd4cc7e1" LastKnownName="MaterialTypesLookup" />
+            <elementDefinition Id="33bbbe79-6d90-409e-a859-1c9aea66bec2" />
+          </dependency>
+          <dependency Id="c271602c-38af-46eb-b3b4-52a29284acaa">
+            <classMoniker Id="964e7428-d528-4fdb-a653-8ed700c1644b" LastKnownName="LanguagesLookup" />
+            <elementDefinition Id="c15676d1-83e7-4dfb-ae05-6dc7fd6e3202" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="996e1b66-3674-4cc0-adca-0a810b782519" name="Materials" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2b9ad691-8e1e-44ab-8e97-e6bdf2582fac" />
+        <suppliersInternal>
+          <dependency Id="67517a34-f7fd-411f-8194-1e23350be2be">
+            <classMoniker Id="a9ae0091-3a3e-444c-b4e3-46a0f1749689" LastKnownName="Material" />
+            <elementDefinition Id="37ebad35-7288-436a-8448-0007bb36dbe0" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a81686e1-bb88-41f2-9901-6f3f92dd3705" name="MaterialDescriptions" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="605a23b0-a3ef-473e-9a3f-bd51239f800a" />
+        <suppliersInternal>
+          <dependency Id="9cbc9423-6da6-4700-a1e0-d19cd93c3abf">
+            <classMoniker Id="b849cefd-7ae1-414c-b5e5-ca5c3cf260ab" LastKnownName="MaterialDescription" />
+            <elementDefinition Id="4fa6ef82-c28c-403b-bf02-f318b6dfce42" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6866bb80-0347-4969-94fa-9d827d3c413c" name="UnitOfMeasuresLookup" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="adb5a068-9df8-410b-b3bc-4e3085ce63e3" />
+        <suppliersInternal>
+          <dependency Id="3420fc32-92ac-4852-81b2-432aacd04631">
+            <classMoniker Id="13055a7e-383d-44fd-8898-0749fffe8b60" LastKnownName="UomLookup" />
+            <elementDefinition Id="b5a3882d-8562-43b8-b7f3-7f77e8d7ab82" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dc97f19f-4d1f-49ff-a992-b832cd4cc7e1" name="MaterialTypesLookup" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="020643f0-afda-467b-b199-4f008b0d2ffa" />
+        <suppliersInternal>
+          <dependency Id="2611c3ae-72a1-4119-b671-f9eb7ca9e325">
+            <classMoniker Id="c4d4433c-be11-4869-9337-d8d8023eb95b" LastKnownName="MaterialTypeLookup" />
+            <elementDefinition Id="fa008d06-8f45-469d-9069-a6165af1e4f1" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="da414e6b-2549-49e3-8357-6430cd810ce3" name="BomService" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5e5c4da8-74e1-4ba7-a666-1d8b4ec4a1cf" />
+        <suppliersInternal>
+          <dependency Id="c6bbb713-0cb6-45f9-a05a-0975c3baec5e">
+            <classMoniker Id="1ed64bf1-5c1c-43ed-ac6c-8c05efa3fa5f" LastKnownName="Boms" />
+            <elementDefinition Id="88a7c861-c929-48d9-b89d-7b12d0a763e9" />
+          </dependency>
+          <dependency Id="26d34bc2-a164-4f67-b44f-4307b40554c1">
+            <classMoniker Id="05025d7f-7ce1-40ca-9a13-3640ae48a624" LastKnownName="BomItems" />
+            <elementDefinition Id="16c63dca-819c-4642-a9b4-d0e4a34ee89c" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1ed64bf1-5c1c-43ed-ac6c-8c05efa3fa5f" name="Boms" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4bbf48ae-f77e-481a-88c5-3219836889e7" />
+        <suppliersInternal>
+          <dependency Id="6c855b98-4987-4384-b1c4-30598f4c49f1">
+            <classMoniker Id="1b40a5e7-420b-4038-bcde-42ce4e6de3a7" LastKnownName="Bom" />
+            <elementDefinition Id="747c039d-d54e-4a61-9df2-cae2cffd1812" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="13055a7e-383d-44fd-8898-0749fffe8b60" name="UomLookup" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="91ee2a54-e6ce-4ffb-9ed8-5dfb40193484" />
+        <ownedAttributesInternal>
+          <property Id="2bc6fe33-7c05-479a-9eea-95abe80fcfc1" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3cc6c281-4e8c-4b29-a126-c40fdb3ac268" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="403a40b6-537e-4c34-ac49-215d02efabca" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="0800832a-dffe-4168-a1d1-fde305ce35bf" name="UnitOfMeasure" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="aad06c5c-c0ce-447a-88fd-bdf73a73bf8b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f654ebd0-01a6-4f11-8121-c06b068a3f8f" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c4d4433c-be11-4869-9337-d8d8023eb95b" name="MaterialTypeLookup" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="752e6f62-944c-4379-9b3f-895db7d74187" />
+        <ownedAttributesInternal>
+          <property Id="8aabe0e9-bb05-43a1-a714-9c2e07d5f0bb" name="Type" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="528e199f-5a4e-42ea-8173-16febbe29b13" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9a33f8a7-d122-4dd7-afee-fa3ca0a3cc79" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="782b4a99-760b-40ea-a688-109727269611" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7c19b209-09e8-4f52-8486-e11cc5225c2f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f89e23a6-f7e9-49af-b871-683e0eeb1f1c" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="9a33f8a7-d122-4dd7-afee-fa3ca0a3cc79" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f89e23a6-f7e9-49af-b871-683e0eeb1f1c" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="403a40b6-537e-4c34-ac49-215d02efabca" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f654ebd0-01a6-4f11-8121-c06b068a3f8f" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="05025d7f-7ce1-40ca-9a13-3640ae48a624" name="BomItems" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="52f0d260-4909-4da1-86d4-2dccf91ee03f" />
+        <suppliersInternal>
+          <dependency Id="34b175ed-97d9-4ead-9ca1-77affc90fa53">
+            <classMoniker Id="3cd33151-aadc-4837-97a1-0c52976c6be9" LastKnownName="BomItem" />
+            <elementDefinition Id="4dbd46ad-fb12-4ad6-9521-b36902664fdd" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="14e31b7b-e594-411f-bcc7-aafac9e0e51b" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="00219aa6-6897-41cc-8b8e-0ddd437859b6" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="31a93035-b80d-4eee-96d4-14eb3f4db61a" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="83394f63-c27d-4954-a2c0-62c24e9545fb" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9bd1dbcb-25b5-4906-abee-0964d26a0e15" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4a5d4589-dca1-4a43-80df-f7ac5855484f" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3cd33151-aadc-4837-97a1-0c52976c6be9" name="BomItem" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fae9dda4-0fa4-42eb-a8a2-44197152e43d" />
+        <ownedAttributesInternal>
+          <property Id="db991f11-ad2c-4d4d-a3b7-25863561b199" name="ParentNumber" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="343fc1eb-eddd-41f2-bc25-44a14ec6b22f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="14e31b7b-e594-411f-bcc7-aafac9e0e51b" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="900548ce-938a-4749-bca1-a80f6410b262" name="ParentVersion" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3823be3a-a22d-4233-a9f1-86f0f9136cae" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="00219aa6-6897-41cc-8b8e-0ddd437859b6" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="a8a9aa6b-da83-4713-a063-7540ee9e1547" name="ChildMaterial" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fadf35e4-4651-4f18-bcd9-43a054d3a875" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="31a93035-b80d-4eee-96d4-14eb3f4db61a" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="3d3e7844-7128-4047-b6c8-51ff6a48198e" name="ChildVersion" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8f29fb20-5152-4b6e-b31e-88ddf4b1c7ae" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="83394f63-c27d-4954-a2c0-62c24e9545fb" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="fcdb9ad8-55a4-4908-b095-f4ee7ecb6cf7" name="Position" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7a7c07f4-b34a-432f-8f5d-3d172695c876" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9bd1dbcb-25b5-4906-abee-0964d26a0e15" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="cc20c031-c448-4063-81ed-08ee07d74f4d" name="Quantity" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c9cc6621-2972-44b5-a8bd-6f24d2b3cc2b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4a5d4589-dca1-4a43-80df-f7ac5855484f" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="23e228e8-c62c-48e2-a1e2-9b55df27a1fb" name="BomItem" isAbstract="false" isLeaf="false" cachedFullName="Architektur::BomItem">
+        <elementDefinition Id="fae9dda4-0fa4-42eb-a8a2-44197152e43d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="144db618-2aba-48d7-8f0b-70fefc35c8be" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4ffd6ce7-273f-40b1-90f5-80d58e206877" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="964e7428-d528-4fdb-a653-8ed700c1644b" name="LanguagesLookup" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="932c8935-277a-4d3d-8cda-7cefafba7b1d" />
+        <suppliersInternal>
+          <dependency Id="ffa95dd4-e8c9-483a-bec6-a1d9d25ca8a3">
+            <classMoniker Id="5bf0e1ae-0d5e-480f-b18e-54314394e847" LastKnownName="LanguageLookup" />
+            <elementDefinition Id="8d84ef59-df9a-41aa-ac02-0e1270df1e65" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5bf0e1ae-0d5e-480f-b18e-54314394e847" name="LanguageLookup" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f03c80ee-b225-4487-9c31-57f9deb39d37" />
+        <ownedAttributesInternal>
+          <property Id="203a13d0-032e-424e-8fef-f9671a4313c5" name="Language" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4468b9d3-9cc2-4969-8b88-8fe2ca73e60e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="144db618-2aba-48d7-8f0b-70fefc35c8be" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="d27963fb-ba07-4f15-aec1-3e76c1a728f7" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2bf768ed-33a1-4491-8707-78d03afb5cfe" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4ffd6ce7-273f-40b1-90f5-80d58e206877" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="5e192422-95a7-4f12-8b9f-6e0e583b741f" name="Architektur">
+    <elementDefinition Id="a9c543e6-f2ef-4fb5-b87a-4b671b6d7987" />
+    <profileInstances>
+      <packageHasProfileInstances Id="d9944eb2-32eb-4439-9317-4126018811a1">
+        <profileInstance Id="9e99f1c9-7724-42c8-97f0-bcc2d53b04d8" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="12cb097c-0630-4ecf-8881-4670bdf6693f">
+        <profileInstance Id="7be83d23-ccbe-4ad9-8233-73787cfd727a" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>
