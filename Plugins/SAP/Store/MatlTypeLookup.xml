@@ -1,0 +1,214 @@
+<MatlTypeLookupTable>
+  <xs:schema id="MatlTypeLookupTable" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="MatlTypeLookupTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="MatlTypeLookup">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EntityID" msdata:AutoIncrement="true" type="xs:int" minOccurs="0" />
+                <xs:element name="MatlType" type="xs:string" minOccurs="0" />
+                <xs:element name="Description" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <MatlTypeLookup>
+    <EntityID>0</EntityID>
+    <MatlType>ABF</MatlType>
+    <Description>Waste</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>1</EntityID>
+    <MatlType>CBAU</MatlType>
+    <Description>Compatible Unit</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>2</EntityID>
+    <MatlType>CH00</MatlType>
+    <Description>CH Contract Handling</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>3</EntityID>
+    <MatlType>CONT</MatlType>
+    <Description>Kanban containers</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>4</EntityID>
+    <MatlType>COUP</MatlType>
+    <Description>Coupons</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>5</EntityID>
+    <MatlType>DIEN</MatlType>
+    <Description>Services</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>6</EntityID>
+    <MatlType>EPA</MatlType>
+    <Description>Equipment Package</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>7</EntityID>
+    <MatlType>ERSA</MatlType>
+    <Description>Spare parts</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>8</EntityID>
+    <MatlType>FERT</MatlType>
+    <Description>Finished products</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>9</EntityID>
+    <MatlType>FGTR</MatlType>
+    <Description>Beverages</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>10</EntityID>
+    <MatlType>FHMI</MatlType>
+    <Description>Prod. resources/tools</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>11</EntityID>
+    <MatlType>FOOD</MatlType>
+    <Description>Foods (excl. perishables)</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>12</EntityID>
+    <MatlType>FRIP</MatlType>
+    <Description>Perishables</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>13</EntityID>
+    <MatlType>HALB</MatlType>
+    <Description>Semifinished products</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>14</EntityID>
+    <MatlType>HAWA</MatlType>
+    <Description>Trading goods</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>15</EntityID>
+    <MatlType>HERS</MatlType>
+    <Description>Manufacturer parts</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>16</EntityID>
+    <MatlType>HIBE</MatlType>
+    <Description>Operating supplies</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>17</EntityID>
+    <MatlType>IBAU</MatlType>
+    <Description>Maintenance assemblies</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>18</EntityID>
+    <MatlType>INTR</MatlType>
+    <Description>Intra materials</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>19</EntityID>
+    <MatlType>KMAT</MatlType>
+    <Description>Configurable materials</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>20</EntityID>
+    <MatlType>LEER</MatlType>
+    <Description>Empties</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>21</EntityID>
+    <MatlType>LEIH</MatlType>
+    <Description>Returnable packaging</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>22</EntityID>
+    <MatlType>LGUT</MatlType>
+    <Description>Empties (retail)</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>23</EntityID>
+    <MatlType>MODE</MatlType>
+    <Description>Apparel (seasonal)</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>24</EntityID>
+    <MatlType>MPO</MatlType>
+    <Description>Material Planning Object</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>25</EntityID>
+    <MatlType>NLAG</MatlType>
+    <Description>Non-stock materials</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>26</EntityID>
+    <MatlType>NOF1</MatlType>
+    <Description>Nonfoods</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>27</EntityID>
+    <MatlType>PIPE</MatlType>
+    <Description>Pipeline materials</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>28</EntityID>
+    <MatlType>PLAN</MatlType>
+    <Description>Trading goods (planned)</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>29</EntityID>
+    <MatlType>PROC</MatlType>
+    <Description>Process materials</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>30</EntityID>
+    <MatlType>PROD</MatlType>
+    <Description>Product groups</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>31</EntityID>
+    <MatlType>ROH</MatlType>
+    <Description>Raw materials</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>32</EntityID>
+    <MatlType>UNBW</MatlType>
+    <Description>Nonvaluated materials</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>33</EntityID>
+    <MatlType>VERP</MatlType>
+    <Description>Packaging</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>34</EntityID>
+    <MatlType>VKHM</MatlType>
+    <Description>Additionals</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>35</EntityID>
+    <MatlType>VOLL</MatlType>
+    <Description>Full products</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>36</EntityID>
+    <MatlType>WERB</MatlType>
+    <Description>Product catalogs</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>37</EntityID>
+    <MatlType>WERT</MatlType>
+    <Description>Value-only materials</Description>
+  </MatlTypeLookup>
+  <MatlTypeLookup>
+    <EntityID>38</EntityID>
+    <MatlType>WETT</MatlType>
+    <Description>Competitive products</Description>
+  </MatlTypeLookup>
+</MatlTypeLookupTable>
