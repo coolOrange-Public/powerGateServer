@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\PostSharp.5.0.55\build\PostSharp.props" Condition="Exists('packages\PostSharp.5.0.55\build\PostSharp.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F68E9BD9-16C5-46A0-9D77-5C8E3352CD7D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VaultServices</RootNamespace>
+    <AssemblyName>VaultServices</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(MSBuildExtensionsPath64)\..\coolOrange\powerGateServer\powerGateServer.exe</StartProgram>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(MSBuildExtensionsPath64)\..\coolOrange\powerGateServer\powerGateServer.exe</StartProgram>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autodesk.Connectivity.Explorer.Extensibility, Version=26.0.0.0, Culture=neutral, PublicKeyToken=215b0879a7566597">
+      <HintPath>packages\coolOrange.VaultServices.21.0.6\lib\net47\2021\Autodesk.Connectivity.Explorer.Extensibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Connectivity.Explorer.ExtensibilityTools, Version=26.0.0.0, Culture=neutral, PublicKeyToken=215b0879a7566597">
+      <HintPath>packages\coolOrange.VaultServices.21.0.6\lib\net47\2021\Autodesk.Connectivity.Explorer.ExtensibilityTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Connectivity.Extensibility.Framework, Version=26.0.0.0, Culture=neutral, PublicKeyToken=215b0879a7566597">
+      <HintPath>packages\coolOrange.VaultServices.21.0.6\lib\net47\2021\Autodesk.Connectivity.Extensibility.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Connectivity.JobProcessor.Extensibility, Version=26.0.0.0, Culture=neutral, PublicKeyToken=215b0879a7566597">
+      <HintPath>packages\coolOrange.VaultServices.21.0.6\lib\net47\2021\Autodesk.Connectivity.JobProcessor.Extensibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Connectivity.WebServices, Version=26.0.0.0, Culture=neutral, PublicKeyToken=215b0879a7566597">
+      <HintPath>packages\coolOrange.VaultServices.21.0.6\lib\net47\2021\Autodesk.Connectivity.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Connectivity.WebServices.WCF, Version=26.0.63.0, Culture=neutral">
+      <HintPath>packages\coolOrange.VaultServices.21.0.6\lib\net47\2021\Autodesk.Connectivity.WebServices.WCF.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.DataManagement.Client.Framework, Version=26.0.0.0, Culture=neutral, PublicKeyToken=215b0879a7566597">
+      <HintPath>packages\coolOrange.VaultServices.21.0.6\lib\net47\2021\Autodesk.DataManagement.Client.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.DataManagement.Client.Framework.Forms, Version=26.0.0.0, Culture=neutral, PublicKeyToken=215b0879a7566597">
+      <HintPath>packages\coolOrange.VaultServices.21.0.6\lib\net47\2021\Autodesk.DataManagement.Client.Framework.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.DataManagement.Client.Framework.Vault, Version=26.0.0.0, Culture=neutral, PublicKeyToken=215b0879a7566597">
+      <HintPath>packages\coolOrange.VaultServices.21.0.6\lib\net47\2021\Autodesk.DataManagement.Client.Framework.Vault.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.DataManagement.Client.Framework.Vault.Forms, Version=26.0.0.0, Culture=neutral, PublicKeyToken=215b0879a7566597">
+      <HintPath>packages\coolOrange.VaultServices.21.0.6\lib\net47\2021\Autodesk.DataManagement.Client.Framework.Vault.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Connectivity.Application.VaultBase">
+      <HintPath>References\Connectivity.Application.VaultBase.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="coolOrange.Logging">
+      <HintPath>packages\coolOrange.Logging.3.1.5\lib\net45\coolOrange.Logging.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="coolOrange.VaultServices_2021">
+      <HintPath>packages\coolOrange.VaultServices.21.0.6\lib\net47\2021\coolOrange.VaultServices_2021.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DynamicLinqExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DynamicLinqExtensions.1.0.2\lib\DynamicLinqExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="PostSharp, Version=5.0.55.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <HintPath>packages\PostSharp.Redist.5.0.55\lib\net45\PostSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp.Patterns.Common, Version=5.0.55.0, Culture=neutral, PublicKeyToken=e7f631e6ce13f078, processorArchitecture=MSIL">
+      <HintPath>packages\PostSharp.Patterns.Common.Redist.5.0.55\lib\net46\PostSharp.Patterns.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp.Patterns.Diagnostics, Version=5.0.55.0, Culture=neutral, PublicKeyToken=e7f631e6ce13f078, processorArchitecture=MSIL">
+      <HintPath>packages\PostSharp.Patterns.Diagnostics.Redist.5.0.55\lib\net46\PostSharp.Patterns.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="powerGateServer.Core">
+      <HintPath>..\..\bin\$(Configuration)\powerGateServer.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="powerGateServer.SDK, Version=17.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\$(Configuration)\powerGateServer.SDK.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="powerVault.Cmdlets">
+      <HintPath>References\powerVault\powerVault.Cmdlets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="powerVault.Services">
+      <HintPath>References\powerVault\powerVault.Services.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.PowerShell.4.ReferenceAssemblies.1.0.0\lib\net4\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\ProductInfo.cs">
+      <Link>Properties\ProductInfo.cs</Link>
+    </Compile>
+    <Compile Include="ContainerBasedService.cs" />
+    <Compile Include="Entities\Base\IAssociationService.cs" />
+    <Compile Include="Entities\Base\BaseObject.cs" />
+    <Compile Include="Entities\File\FileAssociationService.cs" />
+    <Compile Include="Entities\Base\FindStrategies\ExpressionParser.cs" />
+    <Compile Include="Entities\Link\FindStrategies\FindLinks.cs" />
+    <Compile Include="Entities\Base\FindStrategies\QueryNavigationProperty.cs" />
+    <Compile Include="Entities\Link\FindStrategies\LinkExpressionParser.cs" />
+    <Compile Include="Entities\File\File.cs" />
+    <Compile Include="Entities\File\FindStrategies\FileConversionContext.cs" />
+    <Compile Include="Entities\Folder\Folder.cs" />
+    <Compile Include="Entities\Link\Link.cs" />
+    <Compile Include="Entities\Base\FindStrategies\IExpressionParser.cs" />
+    <Compile Include="Entities\Property\Property.cs" />
+    <Compile Include="Environment\VaultAssemblyLoader.cs" />
+    <Compile Include="Environment\VaultLoginCredentials.cs" />
+    <Compile Include="Entities\Base\FindStrategies\FindVaultEntityByProperties.cs" />
+    <Compile Include="Entities\File\FindStrategies\FindVaultFilesByProperties.cs" />
+    <Compile Include="Entities\File\FindStrategies\FindVaultFilesByIds.cs" />
+    <Compile Include="Environment\IVaultEnvironment.cs" />
+    <Compile Include="Environment\PowerVaultEnvironment.cs" />
+    <Compile Include="Entities\File\FindStrategies\FindFiles.cs" />
+    <Compile Include="Entities\File\FindStrategies\FindFilesBase.cs" />
+    <Compile Include="Entities\Property\FindStrategies\FindProperties.cs" />
+    <Compile Include="Entities\Property\FindStrategies\PropertyExpressionParser.cs" />
+    <Compile Include="Entities\Base\FindStrategies\SearchConditionFactory.cs" />
+    <Compile Include="Entities\Base\FindStrategies\SearchSortingFactory.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\VaultExtensions.cs" />
+    <Compile Include="Infrastructure.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\PostSharpLogEnvironment.cs" />
+    <Compile Include="PropertyNameSubstitution.cs" />
+    <Compile Include="Entities\Base\EntityOperationBase.cs" />
+    <Compile Include="Entities\Base\IOperationHandler.cs" />
+    <Compile Include="Entities\Property\Properties.cs" />
+    <Compile Include="Entities\File\Files.cs" />
+    <Compile Include="Entities\Link\Links.cs" />
+    <Compile Include="VaultService.cs" />
+    <Compile Include="VaultServiceEnvironment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="VaultServices.psproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VaultServices.addin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\PostSharp.5.0.55\build\PostSharp.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\PostSharp.5.0.55\build\PostSharp.props'))" />
+    <Error Condition="!Exists('packages\PostSharp.5.0.55\build\PostSharp.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\PostSharp.5.0.55\build\PostSharp.targets'))" />
+  </Target>
+  <Import Project="packages\PostSharp.5.0.55\build\PostSharp.targets" Condition="Exists('packages\PostSharp.5.0.55\build\PostSharp.targets')" />
+</Project>
