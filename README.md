@@ -1,11 +1,14 @@
 # powerGateServer
 
-This repository contains different plugins for [powerGateServer](https://www.coolorange.com/wiki/doku.php?id=powergateserver)
+This repository contains different plugins & behaviors for [powerGateServer](https://doc.coolorange.com/projects/powergateserver)
 
 At the moment the Plugins are:
 - Catalog Service
 - ERP
 - SAP
-- Vault
 
-To be able to build the plugins, you have to be sure that powerGateServer is installed on your development-machine.
+Sample behaviors:
+- Authentication 
+- TrafficLogging 
+
+To to build the plugins & bahaviors powerGateServer needs to be installed on the build environment.
