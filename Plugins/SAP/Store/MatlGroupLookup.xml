@@ -1,0 +1,89 @@
+<MatlGroupLookupTable>
+  <xs:schema id="MatlGroupLookupTable" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="MatlGroupLookupTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="MatlGroupLookup">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EntityID" msdata:AutoIncrement="true" type="xs:int" minOccurs="0" />
+                <xs:element name="MatlGroup" type="xs:string" minOccurs="0" />
+                <xs:element name="Description" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <MatlGroupLookup>
+    <EntityID>0</EntityID>
+    <MatlGroup>01</MatlGroup>
+    <Description>Material group 1</Description>
+  </MatlGroupLookup>
+  <MatlGroupLookup>
+    <EntityID>1</EntityID>
+    <MatlGroup>02</MatlGroup>
+    <Description>Material group 2</Description>
+  </MatlGroupLookup>
+  <MatlGroupLookup>
+    <EntityID>2</EntityID>
+    <MatlGroup>03</MatlGroup>
+    <Description>Lubricating Products</Description>
+  </MatlGroupLookup>
+  <MatlGroupLookup>
+    <EntityID>3</EntityID>
+    <MatlGroup>04</MatlGroup>
+    <Description>Aviation Products</Description>
+  </MatlGroupLookup>
+  <MatlGroupLookup>
+    <EntityID>4</EntityID>
+    <MatlGroup>05</MatlGroup>
+    <Description>Grease Products</Description>
+  </MatlGroupLookup>
+  <MatlGroupLookup>
+    <EntityID>5</EntityID>
+    <MatlGroup>06</MatlGroup>
+    <Description>Oil Products</Description>
+  </MatlGroupLookup>
+  <MatlGroupLookup>
+    <EntityID>6</EntityID>
+    <MatlGroup>07</MatlGroup>
+    <Description>SSR-Gasoline Prods</Description>
+  </MatlGroupLookup>
+  <MatlGroupLookup>
+    <EntityID>7</EntityID>
+    <MatlGroup>08</MatlGroup>
+    <Description>Alcohool Products</Description>
+  </MatlGroupLookup>
+  <MatlGroupLookup>
+    <EntityID>8</EntityID>
+    <MatlGroup>09</MatlGroup>
+    <Description>SSR-Diesel Products</Description>
+  </MatlGroupLookup>
+  <MatlGroupLookup>
+    <EntityID>9</EntityID>
+    <MatlGroup>10</MatlGroup>
+    <Description>Discount Products</Description>
+  </MatlGroupLookup>
+  <MatlGroupLookup>
+    <EntityID>10</EntityID>
+    <MatlGroup>11</MatlGroup>
+    <Description>SSR-Others Products</Description>
+  </MatlGroupLookup>
+  <MatlGroupLookup>
+    <EntityID>11</EntityID>
+    <MatlGroup>DS</MatlGroup>
+    <Description>Special Diesel</Description>
+  </MatlGroupLookup>
+  <MatlGroupLookup>
+    <EntityID>12</EntityID>
+    <MatlGroup>L2</MatlGroup>
+    <Description>Special Lubes</Description>
+  </MatlGroupLookup>
+  <MatlGroupLookup>
+    <EntityID>13</EntityID>
+    <MatlGroup>OIL_PROD</MatlGroup>
+    <Description>Retail group for OIL</Description>
+  </MatlGroupLookup>
+</MatlGroupLookupTable>
