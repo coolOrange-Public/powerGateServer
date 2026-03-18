@@ -1,0 +1,16 @@
+{
+// Relative or absolute path to the Plugin assembly.
+
+"Assembly" : ".\CatalogService.dll",
+
+// Valid protocols are : http, https and ftp
+// Default if not configured : http
+
+"Protocol" : "http",
+
+
+// Port to be used from 1 to 65535
+// Default if not configured : 8080
+
+"Port":8080
+}
