@@ -1,0 +1,109 @@
+<ValuationTypeLookupTable>
+  <xs:schema id="ValuationTypeLookupTable" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="ValuationTypeLookupTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ValuationTypeLookup">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EntityID" msdata:AutoIncrement="true" type="xs:int" minOccurs="0" />
+                <xs:element name="ValuationType" type="xs:string" minOccurs="0" />
+                <xs:element name="ValuationArea" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <ValuationTypeLookup>
+    <EntityID>0</EntityID>
+    <ValuationType>01</ValuationType>
+    <ValuationArea>0001</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>1</EntityID>
+    <ValuationType>02</ValuationType>
+    <ValuationArea>0001</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>2</EntityID>
+    <ValuationType>C1</ValuationType>
+    <ValuationArea>0001</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>3</EntityID>
+    <ValuationType>C2</ValuationType>
+    <ValuationArea>0001</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>4</EntityID>
+    <ValuationType>C3</ValuationType>
+    <ValuationArea>0001</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>5</EntityID>
+    <ValuationType>EIGEN</ValuationType>
+    <ValuationArea>0001</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>6</EntityID>
+    <ValuationType>FREMD</ValuationType>
+    <ValuationArea>0001</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>7</EntityID>
+    <ValuationType>LAND 1</ValuationType>
+    <ValuationArea>0001</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>8</EntityID>
+    <ValuationType>LAND 2</ValuationType>
+    <ValuationArea>0001</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>9</EntityID>
+    <ValuationType>RAKTION</ValuationType>
+    <ValuationArea>0001</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>10</EntityID>
+    <ValuationType>RNORMAL</ValuationType>
+    <ValuationArea>0001</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>11</EntityID>
+    <ValuationType>ABC</ValuationType>
+    <ValuationArea>AP05</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>12</EntityID>
+    <ValuationType>DRP</ValuationType>
+    <ValuationArea>AP05</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>13</EntityID>
+    <ValuationType>SLP</ValuationType>
+    <ValuationArea>AP05</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>14</EntityID>
+    <ValuationType>N/OWNED TA</ValuationType>
+    <ValuationArea>ATTS</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>15</EntityID>
+    <ValuationType>N/OWNED UT</ValuationType>
+    <ValuationArea>ATTS</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>16</EntityID>
+    <ValuationType>TAX</ValuationType>
+    <ValuationArea>ATTS</ValuationArea>
+  </ValuationTypeLookup>
+  <ValuationTypeLookup>
+    <EntityID>17</EntityID>
+    <ValuationType>UNTAX</ValuationType>
+    <ValuationArea>ATTS</ValuationArea>
+  </ValuationTypeLookup>
+</ValuationTypeLookupTable>
